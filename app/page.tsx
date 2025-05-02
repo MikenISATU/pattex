@@ -133,7 +133,7 @@ const PattexHomePage: React.FC = () => {
             <img src="/pattexl.JPG" alt="Pattex Logo" className="h-10 sm:h-12 hover:scale-105 transition-transform cursor-pointer" />
           </Link>
           <nav className="space-x-2 sm:space-x-6 text-xs sm:text-sm font-light flex flex-wrap gap-y-2">
-            {["features", "technology", "partners", "customers", "demo", "app", "team", "values", "contact"].map((section) => (
+            {["features", "technology", "values", "partners", "customers", "demo", "app", "team", "contact"].map((section) => (
               <a
                 key={section}
                 href={`#${section}`}
@@ -187,6 +187,35 @@ const PattexHomePage: React.FC = () => {
               </li>
             ))}
           </ul>
+        </section>
+
+        <section id="values" className="max-w-6xl mx-auto mb-24 text-center scroll-mt-28 animate-section">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Values</h3>
+          <div className="grid grid-cols-1 gap-6">
+            <div className="bg-zinc-900 rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+              <h4 className="text-xl font-semibold mb-2 text-white">Vision</h4>
+              <p className="text-sm sm:text-base text-gray-400 font-light">{missionVision.vision}</p>
+            </div>
+            <div className="bg-zinc-900 rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+              <h4 className="text-xl font-semibold mb-2 text-white">Mission</h4>
+              <p className="text-sm sm:text-base text-gray-400 font-light">{missionVision.mission}</p>
+            </div>
+            <div className="bg-zinc-900 rounded-lg p-6 shadow-lg">
+              <h4 className="text-xl font-semibold mb-2 text-white">Core Values</h4>
+              <p className="text-sm sm:text-base text-gray-400 font-light mb-4">Your Pattern Express</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {missionVision.coreValues.map((value, i) => (
+                  <div
+                    key={i}
+                    className="bg-zinc-800 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-all"
+                  >
+                    <h5 className="text-base font-semibold text-white mb-1">{value.title}</h5>
+                    <p className="text-sm text-gray-400 font-light">{value.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="partners" className="max-w-6xl mx-auto mb-24 text-center scroll-mt-28 animate-section">
@@ -255,35 +284,6 @@ const PattexHomePage: React.FC = () => {
                 <p className="text-sm text-gray-400">{member.role}</p>
               </div>
             ))}
-          </div>
-        </section>
-
-        <section id="values" className="max-w-6xl mx-auto mb-24 text-center scroll-mt-28 animate-section">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Values</h3>
-          <div className="grid grid-cols-1 gap-6">
-            <div className="bg-zinc-900 rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
-              <h4 className="text-xl font-semibold mb-2 text-white">Vision</h4>
-              <p className="text-sm sm:text-base text-gray-400 font-light">{missionVision.vision}</p>
-            </div>
-            <div className="bg-zinc-900 rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
-              <h4 className="text-xl font-semibold mb-2 text-white">Mission</h4>
-              <p className="text-sm sm:text-base text-gray-400 font-light">{missionVision.mission}</p>
-            </div>
-            <div className="bg-zinc-900 rounded-lg p-6 shadow-lg">
-              <h4 className="text-xl font-semibold mb-2 text-white">Core Values</h4>
-              <p className="text-sm sm:text-base text-gray-400 font-light mb-4">Your Pattern Express</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {missionVision.coreValues.map((value, i) => (
-                  <div
-                    key={i}
-                    className="bg-zinc-800 rounded-lg p-4 hover:shadow-lg hover:scale-105 transition-all"
-                  >
-                    <h5 className="text-base font-semibold text-white mb-1">{value.title}</h5>
-                    <p className="text-sm text-gray-400 font-light">{value.description}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </section>
 

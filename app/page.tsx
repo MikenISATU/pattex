@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Link from "next/link";
 
 // Define the component with React.FC for TypeScript
 const PattexHomePage: React.FC = () => {
@@ -90,7 +91,7 @@ const PattexHomePage: React.FC = () => {
       { title: "Tailored Innovation", description: "We design custom solutions to meet unique customer needs." },
       { title: "Excellence as a Standard", description: "We uphold high standards, always striving to improve." },
       { title: "X-Factor Collaboration", description: "We foster teamwork where ideas flow and everyone contributes." },
-    ],
+    ] as CoreValue[],
   };
 
   // Add IntersectionObserver for scroll animations
@@ -128,7 +129,9 @@ const PattexHomePage: React.FC = () => {
       `}</style>
       <div className="min-h-screen bg-black text-white px-4 sm:px-6 py-10 font-roboto scroll-smooth">
         <header className="max-w-6xl mx-auto flex justify-between items-center mb-12 sticky top-0 bg-black z-50 py-4">
-          <img src="/pattexl.JPG" alt="Pattex Logo" className="h-10 sm:h-12" />
+          <Link href="/">
+            <img src="/pattexl.JPG" alt="Pattex Logo" className="h-10 sm:h-12 hover:scale-105 transition-transform cursor-pointer" />
+          </Link>
           <nav className="space-x-2 sm:space-x-6 text-xs sm:text-sm font-light flex flex-wrap gap-y-2">
             {["features", "technology", "partners", "customers", "demo", "app", "team", "values", "contact"].map((section) => (
               <a

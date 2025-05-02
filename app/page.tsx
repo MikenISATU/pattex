@@ -259,7 +259,7 @@ const PattexHomePage: React.FC = () => {
         </section>
 
         <section id="values" className="max-w-6xl mx-auto mb-24 text-center scroll-mt-28 animate-section">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Values</h3>
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6">Vision, Mission, & Core Values</h3>
           <div className="grid grid-cols-1 gap-6">
             <div className="bg-zinc-900 rounded-lg p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-all">
               <h4 className="text-xl font-semibold mb-2 text-white">Vision</h4>
